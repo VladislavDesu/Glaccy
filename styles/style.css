@@ -415,7 +415,10 @@ input[name="slider"] {
 .blue-item,
 .brown-item {
   display: none;
-  transition: display 1s linear;
+}
+
+.wrapper {
+  transition: background .2s linear;
 }
 
 input[value="green-bg"]:checked ~ .wrapper .green-item,
