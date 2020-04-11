@@ -9,6 +9,7 @@
   <title>Gllacy Shop</title>
 </head>
 <body>
+  <span class="yarik">ЯРИК КУ! Я слежу</span>
   <div class="wrapper">
     <header class="main-header">
       <div class="container">
@@ -17,6 +18,13 @@
           <ul class="nav">
             <li class="nav-item">
               <a class="nav-link" href="#">Каталог</a>
+              <ul class="sub-nav">
+                <li class="sub-item  sub-news"><a class="sub-link">Новинки</a></li>
+                <li class="sub-item"><a class="sub-link" href="#">Сливочное</a></li>
+                <li class="sub-item"><a class="sub-link" href="#">Щербеты</a></li>
+                <li class="sub-item"><a class="sub-link" href="#">Фруктовый лед</a></li>
+                <li class="sub-item"><a class="sub-link" href="#">Мелорин</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Доставка и оплата</a>
@@ -27,9 +35,29 @@
           </ul>
         </nav>
         <div class="user-block">
-          <div class="user-block-item search">Поиск</div>
-          <div class="user-block-item entrance">Вход</div>
-          <div class="user-block-item product">Пусто</div>
+          <div class="user-block-item">
+            <div class="search">Поиск
+              <form class="form-search" action="index.html" method="post">
+                <input type="search" name="search" maxlength="30" placeholder="Что ищем?">
+              </form>
+            </div>
+          </div>
+          <div class="user-block-item">
+            <div class="entrance">Вход
+              <form class="form-entrance" action="index.html" method="post">
+                <input type="search" name="email" placeholder="Электронная почта">
+                <input type="password" name="password" placeholder="Пароль">
+                <button class="btn entrance-btn" type="submit" name="entrance">Войти</button>
+                <ul class="entrance-list">
+                  <li><a class="entrance-link" href="#">Забыли пароль?</a></li>
+                  <li><a class="entrance-link" href="#">Новая регистрация</a></li>
+                </ul>
+              </form>
+            </div>
+          </div>
+          <div class="user-block-item">
+            <div class="product">Пусто</div>
+          </div>
         </div>
         <div class="info">
           <div class="info-time">С 10 до 20, ежедневно</div>
@@ -81,6 +109,7 @@
             <a class="hit-title" href="#">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
             </a>
+            <a class="btn btn-hidden" href="#">Быстрый просмотр</a>
           </div>
           <div class="hit-item">
             <div class="hit-product hit-marker">
@@ -90,6 +119,7 @@
             <a class="hit-title" href="#">
               Сливочно-кофейное с кусочками шоколада
             </a>
+            <a class="btn btn-hidden" href="#">Быстрый просмотр</a>
           </div>
           <div class="hit-item">
             <div class="hit-product hit-marker">
@@ -99,6 +129,7 @@
             <a class="hit-title" href="#">
               Сливочно-клубничное с присыпкой из белого шоколада
             </a>
+            <a class="btn btn-hidden" href="#">Быстрый просмотр</a>
           </div>
           <div class="hit-item">
             <div class="hit-product hit-marker">
@@ -108,6 +139,7 @@
             <a class="hit-title" href="#">
               Сливочное крем-брюле с карамельной подливкой
             </a>
+            <a class="btn btn-hidden" href="#">Быстрый просмотр</a>
           </div>
         </div>
 
@@ -178,11 +210,11 @@
 
     <footer class="container clearfix">
       <div class="footer-social">
-        <ul>
-          <li class="social-tw"><a href="#">Twitter</a></li>
-          <li class="social-inst"><a href="#">Instagram</a></li>
-          <li class="social-fb"><a href="#">FaceBook</a></li>
-          <li class="social-vk"><a href="#">Vkontakte</a></li>
+        <ul class="social-nav">
+          <li><a class="social-tw" href="#">Twitter</a></li>
+          <li><a class="social-inst" href="#">Instagram</a></li>
+          <li><a class="social-fb" href="#">FaceBook</a></li>
+          <li><a class="social-vk" href="#">Vkontakte</a></li>
         </ul>
       </div>
       <div class="footer-navigation">
