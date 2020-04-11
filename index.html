@@ -8,8 +8,11 @@
   <link rel="stylesheet" href="styles/style.css">
   <title>Gllacy Shop</title>
 </head>
-<body>
-  <span class="yarik">ЯРИК КУ! Я слежу</span>
+<body style="background-color: #999;">
+
+  <input type="radio" name="slider" value="green-bg" id="green-bg" checked>
+  <input type="radio" name="slider" value="blue-bg" id="blue-bg">
+  <input type="radio" name="slider" value="brown-bg" id="brown-bg">
   <div class="wrapper">
     <header class="main-header">
       <div class="container">
@@ -68,18 +71,29 @@
 
     <main>
       <div class="container">
-
         <div class="main-slide">
-          <div class="slide-item">
+          <div class="slide-item green-item">
             <div class="slide-title">
               Крем-брюле и пломбир с малиновым джемом
             </div>
             <a class="btn slide-btn" href="#">Давайте оба!</a>
           </div>
+          <div class="slide-item blue-item">
+            <div class="slide-title">
+              Шоколадный пломбир и лимонный сорбет
+            </div>
+            <a class="btn slide-btn" href="#">Давайте оба!</a>
+          </div>
+          <div class="slide-item brown-item">
+            <div class="slide-title">
+              Пломбир с помадкой и клубничный щербет
+            </div>
+            <a class="btn slide-btn" href="#">Давайте оба!</a>
+          </div>
           <div class="slider-controls">
-            <label class="slide-label green-1" for=""></label>
-            <label class="slide-label blue-2" for=""></label>
-            <label class="slide-label brown-3" for=""></label>
+            <label class="slide-label" for="green-bg"></label>
+            <label class="slide-label" for="blue-bg"></label>
+            <label class="slide-label" for="brown-bg"></label>
           </div>
         </div>
 

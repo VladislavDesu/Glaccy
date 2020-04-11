@@ -7,13 +7,6 @@ body {
   color: #fff;
 }
 
-.yarik {
-
-  position: fixed;
-  top: 70px;
-  left: 950px;
-}
-
 .btn {
   display: inline-block;
   vertical-align: top;
@@ -42,13 +35,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.wrapper {
-  background-color: #849d8f;
-  background-image: url("../img/main-bg.png");
-  background-repeat: no-repeat;
-  background-position: top center;
 }
 
 .clearfix::after{
@@ -402,6 +388,10 @@ img {
   font-size: 0;
 }
 
+input[name="slider"] {
+  display: none;
+}
+
 .slider-controls .slide-label {
   display: inline-block;
   vertical-align: top;
@@ -419,6 +409,46 @@ img {
 
 .slider-controls .slide-label:active {
   background-color: #fff;
+}
+
+.green-item,
+.blue-item,
+.brown-item {
+  display: none;
+  transition: display 1s linear;
+}
+
+input[value="green-bg"]:checked ~ .wrapper .green-item,
+input[value="blue-bg"]:checked ~ .wrapper .blue-item,
+input[value="brown-bg"]:checked ~ .wrapper .brown-item {
+  display: block;
+}
+
+input[value="green-bg"]:checked ~ .wrapper label[for="green-bg"],
+input[value="blue-bg"]:checked ~ .wrapper label[for="blue-bg"],
+input[value="brown-bg"]:checked ~ .wrapper label[for="brown-bg"] {
+  background-color: #fff;
+}
+
+input[value="green-bg"]:checked ~ .wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/green-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+input[value="blue-bg"]:checked ~ .wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/blue-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+input[value="brown-bg"]:checked ~ .wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/brown-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 /*free content block*/
 .free-content {
