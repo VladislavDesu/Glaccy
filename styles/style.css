@@ -14,12 +14,16 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
+  outline: 0;
+  border: 0;
+  padding: 10px 20px;
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
   background-image: linear-gradient(to bottom, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -30,6 +34,33 @@ body {
 .btn:active {
   background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: inset 0px 2px 2px 0px #942718;
+}
+
+.input-style {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  outline: 0;
+  background-color: #fff;
+  color: #353535;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+}
+
+.input-style:hover {
+  border: 1px solid #c7c6c5;
+}
+
+.input-style::placeholder {
+  color: #9b9b9b;
+  font-weight: 400;
 }
 
 img {
@@ -224,19 +255,6 @@ img {
   display: block;
 }
 
-.form-search input[type="search"]::placeholder {
-  color: #999;
-}
-
-.form-search input[type="search"] {
-  width: 100%;
-  padding: 10px 11px;
-  color: #999;
-  border-radius: 5px;
-  border: 1px solid #d3d3d2;
-  outline: 0;
-  background-color: #fff;
-}
 
 .user-block .search:hover {
   background: #f7f6f3 url("../img/search-black.svg") no-repeat center;
@@ -267,24 +285,13 @@ img {
 }
 
 .form-entrance input {
-  box-sizing: border-box;
-  width: 100%;
   margin-bottom: 10px;
-  padding: 10px 11px;
-  color: #999;
-  border-radius: 5px;
-  border: 1px solid #d3d3d2;
-  outline: 0;
-  background-color: #fff;
 }
 
 .user-block-item:hover .form-entrance {
   display: block;
 }
 
-.form-entrance input::placeholder {
-  color: #999;
-}
 
 .user-block .entrance:hover {
   color: #333;
@@ -298,8 +305,6 @@ img {
 .entrance-btn {
   margin-top: 5px;
   margin-right: 4px;
-  border: 0;
-  outline: 0;
   padding: 8px 30px;
 }
 
@@ -418,6 +423,7 @@ input[name="slider"] {
 }
 
 .wrapper {
+  position: relative;
   transition: background .2s linear;
 }
 
@@ -710,30 +716,15 @@ input[value="brown-bg"]:checked ~ .wrapper {
   margin-bottom: 35px;
 }
 
-.mail-input{
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  width: 68%;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-left: 10px;
-  margin-right: 10px;
-  font-weight: 400;
-  color: #999999;
-  border: 1px solid #d3d3d2;
-  background-color: #fff;
-  border-radius: 5px;
-  outline: 0;
+.mail-form input {
+  width: 70%;
+  margin-right: 16px;
 }
 
 .btn-mail {
   font-size: 17px;
   line-height: 25px;
   padding: 10px 25px;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
 }
 /*map block*/
 .map {
@@ -902,4 +893,81 @@ input[value="brown-bg"]:checked ~ .wrapper {
 .copyright a:hover {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(249, 172, 159, 0.3);
+}
+/*Оверлей*/
+.modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*Образтная связь*/
+.modal-content {
+  position: fixed;
+  display: none;
+  box-sizing: border-box;
+  top: 338px;
+  left: 50%;
+  margin-left: -264px;
+  border-radius: 10px;
+  width: 478px;
+  color: #343434;
+  background-color: #f8f7f4;
+  padding: 25px;
+}
+
+.modal-form input{
+  width: 65%;
+  margin-bottom: 20px;
+}
+.modal-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.modal-form textarea {
+  margin-bottom: 25px;
+  height: 153px;
+  resize: none;
+}
+
+.modal-content-close {
+  position: absolute;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.modal-content-close::after,
+.modal-content-close::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 8px;
+  width: 23px;
+  height: 2px;
+  background-color: #000;
+}
+
+.modal-content-close::after {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::before {
+  transform: rotate(-45deg);
+}
+
+.btn-modal {
+  float: right;
 }

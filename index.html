@@ -20,7 +20,7 @@
         <nav class="main-navigation">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Каталог</a>
+              <a class="nav-link" href="catalog.index">Каталог</a>
               <ul class="sub-nav">
                 <li class="sub-item  sub-news"><a class="sub-link">Новинки</a></li>
                 <li class="sub-item"><a class="sub-link" href="#">Сливочное</a></li>
@@ -41,15 +41,15 @@
           <div class="user-block-item">
             <div class="search">Поиск
               <form class="form-search" action="index.html" method="post">
-                <input type="search" name="search" maxlength="30" placeholder="Что ищем?">
+                <input class="input-style" type="search" name="search" maxlength="30" placeholder="Что ищем?">
               </form>
             </div>
           </div>
           <div class="user-block-item">
             <div class="entrance">Вход
               <form class="form-entrance" action="index.html" method="post">
-                <input type="search" name="email" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
+                <input class="input-style" type="search" name="email" placeholder="Электронная почта">
+                <input class="input-style" type="password" name="password" placeholder="Пароль">
                 <button class="btn entrance-btn" type="submit" name="entrance">Войти</button>
                 <ul class="entrance-list">
                   <li><a class="entrance-link" href="#">Забыли пароль?</a></li>
@@ -197,7 +197,7 @@
                 Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
               </div>
               <form class="mail-form" action="index.html" method="post">
-                <input class="mail-input" type="mail" name="mail" placeholder="Электронная почта">
+                <input class="input-style" type="mail" name="mail" placeholder="Электронная почта">
                 <button class="btn btn-mail" type="submit" name="button">Отправить</button>
               </form>
             </div>
@@ -247,5 +247,18 @@
       </div>
     </footer>
   </div>
+
+  <div class="modal-content">
+    <div class="modal-title">Мы обязательно вам ответим!</div>
+    <button class="modal-content-close" type="button" name="button" title="Закрыть">Закрыть</button>
+    <form class="modal-form clearfix" action="index.html" method="post">
+      <input class="input-style" type="text" name="text" placeholder="Как вас зовут?">
+      <input class="input-style" type="email" name="email" placeholder="Ваша почта для ответа?">
+      <textarea class="input-style" name="name" placeholder="Напишите что нибудь..."></textarea>
+      <button class="btn btn-modal" type="submit" name="button">Отправить</button>
+    </form>
+  </div>
+
+  <div class="modal-overlay"></div>
 </body>
 </html>
