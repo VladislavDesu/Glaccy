@@ -909,6 +909,7 @@ input[name="slider"] {
 }
 
 .wrapper {
+  min-width: 1200px;
   position: relative;
   transition: background .2s linear;
 }
